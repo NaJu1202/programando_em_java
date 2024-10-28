@@ -17,6 +17,34 @@ public class PautaMain {
                 + "6. Finalizar operações");
         opcao = scan.next().charAt(0);
 
-        scan.close();
+        switch (opcao) {
+            case '1':
+                System.out.println("Inciando cadastro..");
+                // cadastrarUsuario();
+                break;
+            case '2':
+                System.out.println(aluno.toString());
+                break;
+            case '3':
+                System.out.println();
+                break;
+            case '4':
+                System.out.println(aluno.calcularMedia());
+                break;
+            case '5':
+                System.out.println("saindo....");
+                break;
+
+            default:
+                System.out.println("opcao invalida");
+                break;
+        }
+
     }
+
+    static void cadastrarUsuario(Pauta aluno) {
+        System.out.println("Insira a matricula: ");
+        aluno.setMatricula(scan.nextInt());
+    }
+
 }

@@ -63,7 +63,11 @@ public class Pauta {
 
     @Override
     public String toString() {
-        return "Pauta [matricula=" + matricula + ", numFalta=" + numFalta + ", nota1=" + nota1 + ", nota2=" + nota2
-                + ", nomeAluno=" + nomeAluno + ", toString=";
+        return "Matrucula: " + matricula + ", numFalta: " + numFalta + ", nota1: " + nota1 + ", nota2: " + nota2
+                + ", nomeAluno: " + nomeAluno;
+    }
+
+    public double calcularMedia() {
+        return (this.nota1 + this.nota2) / 2;
     }
 }
