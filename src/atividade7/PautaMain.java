@@ -29,9 +29,8 @@ public class PautaMain {
                     if (aluno.calcularFaltas() == 0) {
                         System.out.println("aluno reprovado");
                     } else {
-                        System.out
-                                .println(aluno.getNomeAluno() + " pode faltar ainda " + aluno.calcularFaltas()
-                                        + " dias.");
+                        System.out.println(aluno.getNomeAluno() + " pode faltar ainda " + aluno.calcularFaltas()
+                                + " dias.");
                     }
                     break;
                 case '4':
