@@ -61,13 +61,32 @@ public class Pauta {
         this.nota2 = nota2;
     }
 
+    public void setNomeAluno(String nomeAluno) {
+        this.nomeAluno = nomeAluno;
+    }
+
     @Override
     public String toString() {
-        return "Matrucula: " + matricula + ", numFalta: " + numFalta + ", nota1: " + nota1 + ", nota2: " + nota2
-                + ", nomeAluno: " + nomeAluno;
+        return "Matricula: " + matricula + "| numero de faltas: " + numFalta + "| nota 1: " + nota1 + "| nota 2: "
+                + nota2
+                + "| nome do aluno: " + nomeAluno;
     }
 
     public double calcularMedia() {
         return (this.nota1 + this.nota2) / 2;
+    }
+
+    public int calcularFaltas() {
+        if (this.numFalta <= 25) {
+            return 25 - this.numFalta;
+        }
+        return this.numFalta = 0;
+    }
+
+    public boolean situacaoAluno() {
+        if (this.numFalta > 25 & (calcularMedia() >= 7)) {
+            return true;
+        }
+        return false;
     }
 }
