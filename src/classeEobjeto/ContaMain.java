@@ -19,7 +19,7 @@ public class ContaMain {
             switch (opcao) {
                 case '1':
                     System.out.println("Iniciando o cadastramento...");
-                    cadastroDeUsuatio(usuario);
+                    cadastroDeUsuario(usuario);
                     break;
                 case '2':
                     System.out.println("Saldo atual: " + usuario.getSaldo());
@@ -51,7 +51,7 @@ public class ContaMain {
         } while (opcao != '5');
     }
 
-    static void cadastroDeUsuatio(Conta usuario) {
+    static void cadastroDeUsuario(Conta usuario) {
         System.out.println("Digite o número da conta");
         usuario.setNumeroConta(scan.nextInt());
         System.out.println("Insira o Titular da conta");
